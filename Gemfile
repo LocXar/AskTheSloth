@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-
+gem 'bundler'
 gem 'jekyll'
+gem "html-proofer"
 gem 'jekyll-paginate'
 gem 'kramdown'
 gem 'pygments.rb'
