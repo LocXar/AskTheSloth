@@ -1,0 +1,45 @@
+title: Ask the Sloth
+short-title: ATS # this prepended to the page title
+author: LocXar
+website: http://www.locxar.de
+description: >
+  Auf diesem Blog schreibe ich über mein Leben, Astronomie, IT und Landwirtschaft/Gärtnerei.
+
+twitter_username: locxars
+github_username: LocXar
+
+permalink: /log/:year/:month/:day/
+
+# show future posts
+future: true
+
+# Build settings
+markdown: kramdown
+theme: jekyll-lab-notebook
+
+plugins:
+- jekyll-lab-notebook-plugins
+- jekyll-maps
+- jekyll-leaflet
+
+jekyll-lab-notebook:
+  home-page:
+    -
+      name: Log
+      is_posts: true
+      hidden: false
+    -
+      name: Protokolle
+      dir: 'protocols/'
+      hidden: true
+    -
+      name: Sonstiges
+      dir: 'random/'
+      hidden: true
+
+# live reload options
+livereload: true
+reload_port: 5678
+
+# prevent jekyll from exploding on Travis
+exclude: [vendor]

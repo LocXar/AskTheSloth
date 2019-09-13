@@ -1,0 +1,75 @@
+---
+layout: default
+---
+<head>
+  {% include calheader.html %}
+  {% assign home-items = site.jekyll-lab-notebook.home-page %}
+
+    <script type="text/javascript">
+
+        // stolen from here: https://stackoverflow.com/questions/688196/how-to-use-a-link-to-call-javascript
+        window.onload = function() {
+          // hides the element specified by data-target when a link is clicked
+          f = function() {
+            var button = document.getElementById(this.id);
+            target = document.getElementById(button.dataset.target)
+            if (target.style.display === 'block') {
+                target.style.display = 'none';
+            } else {
+                target.style.display = 'block';
+            }
+            return false;
+          }
+
+          {% if home-items %}
+            {% for item in home-items %}
+              {% assign button_id = item.name | slugify | append: '-link' %}
+              button = document.getElementById("{{ button_id }}")
+              button.onclick = f;
+              target = document.getElementById(button.dataset.target)
+              {% if item.hidden %}
+                target.style.display = 'none'
+              {% else %}
+                target.style.display = 'block'
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        }
+    </script>
+</head>
+<p>{{ site.description | escape }}</p>
+<div id="calendar" style="margin:0 auto;">
+	<div id="cal-heatmap"></div>
+	<div style="padding-top: 10px;">
+		<a href="#" style="margin-right:10px;" id="cal-heatmap-PreviousDomain-selector">&larr;</a>
+		<a href="#" style="float:right;" id="cal-heatmap-NextDomain-selector">&rarr;</a>
+	</div>
+</div>
+<div id="home">
+  {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+  {% if home-items %}
+    {% for item in home-items %}
+      <h3><a href="#" id="{{ item.name | slugify | append: '-link'}}"
+         data-target="{{ item.name | slugify | append: '-list'}}">{{ item.name }}</h3>
+      <div id="{{ item.name | slugify | append: '-list' }}">
+      <ul class="posts">
+        {% if item.is_posts %}
+          {% for post in site.posts %}
+            {% capture date %}{{post.date | date: '%s' | plus: 0 }}{% endcapture %}
+            {% if date < now %}
+              <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: "%d. %B %Y" }} - {{ post.title | upcase | replace: "ü", "Ü" | replace: "ä", "Ä" | replace: "ö", "Ö" }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% elsif item.dir %}
+          {% for page in site.pages %}
+            {% if page.url contains item.dir %}
+              <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title | escape }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </ul>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
+{% include calfooter.html %}

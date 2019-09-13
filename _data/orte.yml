@@ -1,0 +1,13 @@
+# _data/orte.yml
+- title: "Walter Hohmann Sternwarte"
+  data_set: "01"
+  location:
+    latitude: 51.39472
+    longitude: 6.97944
+    marker_icon: https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png
+
+- title: "Planetarium Bochum"
+  data_set: "02"
+  location:
+    latitude: 51.485556
+    longitude: 7.227778
