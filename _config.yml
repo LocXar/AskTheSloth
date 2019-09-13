@@ -19,7 +19,6 @@ theme: jekyll-lab-notebook
 
 plugins:
 - jekyll-lab-notebook-plugins
-- jekyll-maps
 - jekyll-leaflet
 
 jekyll-lab-notebook:
