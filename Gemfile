@@ -8,6 +8,8 @@ gem 'kramdown'
 gem 'pygments.rb'
 gem 'jekyll-lab-notebook'
 gem 'jekyll-lab-notebook-plugins'
+gem 'jekyll-twitter-plugin'
+gem "jekyll-jupyter-notebook"
 gem "jekyll-leaflet", git: "https://github.com/DavidJVitale/jekyll-leaflet"
 
 # support for auto reloading page in browser when changed

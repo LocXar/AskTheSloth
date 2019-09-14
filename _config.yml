@@ -20,6 +20,8 @@ theme: jekyll-lab-notebook
 plugins:
 - jekyll-lab-notebook-plugins
 - jekyll-leaflet
+- jekyll-twitter-plugin
+- jekyll-jupyter-notebook
 
 jekyll-lab-notebook:
   home-page:
