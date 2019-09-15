@@ -5,11 +5,13 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.date | date: "%B %Y"}}</h1>
-    <h3 style="margin-bottom: 0px">Event: <a href="{{ page.eventlink }}">{{ page.event }}</a></h3>
-    {% if page.eventdesc %}
-      <h4 style="margin-bottom: 5px">... <a href="{{ page.eventlink }}">{{ page.eventdesc }}</a></h4>
+    <h3 style="margin-bottom: 0px"><b>Event:</b> <a href="{{ page.eventlink }}">{{ page.event }}{% if page.eventdesc %} - {{ page.eventdesc }}{% endif %}</a></h3>
+    {% if page.eventstatus %}
+      <h3 style="margin-bottom: 5px"><b>Status:</b> {{ page.eventstatus }}</h3>
     {% endif %}
-    <h3 margin="0">Ort: {{ page.ort }}</h3>
+    <h3 style="margin-bottom: 0px"><b>Am:</b> {{ page.date | date: "%d.%m.%Y" }}</h3>
+    <h3 style="margin-bottom: 0px"><b>Um:</b> {{ page.beginn | date: "%R" }} bis {{ page.ende | date: "%R"}} </h3>
+    <h3 margin="0"><b>Ort:</b> {{ page.ort }}</h3>
     <p class="post-meta">
     {% for ort in site.data.orte %}
       {% if ort.title == page.ort %}

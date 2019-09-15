@@ -8,4 +8,4 @@ beginn: 20:00
 ende: 21:30
 ---
 
-# 27.11.2019 #misc
+# 27.11.2019 #Stammtisch

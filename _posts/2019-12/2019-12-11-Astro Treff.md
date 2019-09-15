@@ -8,4 +8,4 @@ beginn: 20:00
 ende: 21:30
 ---
 
-# 11.12.2019 #misc
+# 11.12.2019 #Stammtisch

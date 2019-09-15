@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Projects
+title: Events
 ---
 
-<p>All log entries organized by project</p>
+<p>Alle Einträge sortiert nach Zusammengehörigkeit:</p>
 <ul>
-{% for project in site.data.tagmap %}
+{% for event in site.data.tagmap %}
   <li>
-    <a href="{{ site.baseurl }}{{ page.url }}{{ project[0] }}">{{ project[0] }}</a>
+    <a href="{{ site.baseurl }}{{ page.url }}{{ event[0] }}">{{ event[0] }}</a>
   </li>
 {% endfor %}
 </ul>

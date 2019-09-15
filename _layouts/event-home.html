@@ -1,0 +1,13 @@
+---
+layout: page
+title: Events
+---
+
+<p>Alle Einträge sortiert nach Zusammengehörigkeit:</p>
+<ul>
+{% for event in site.data.tagmap %}
+  <li>
+    <a href="{{ site.baseurl }}{{ page.url }}{{ event[0] }}">{{ event[0] }}</a>
+  </li>
+{% endfor %}
+</ul>

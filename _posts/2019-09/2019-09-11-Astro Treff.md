@@ -7,7 +7,7 @@ beginn: 20:00
 ende: 21:30
 ---
 
-# 11.09.2019 #misc
+# 11.09.2019 #Stammtisch
 
 Heute war es leider bewölkt, konnten wir die Teleskope heute nicht benutzen. Da noch nicht so viele da waren, hat Jörg H. von der WHS, mir schonmal einen Rundgang zu den Teleskopen geben. Dabei haben wir uns über die Astrofotografie unterhalten und er hat mir schon sehr viele Tipps geben. Darunter auch, dass ich mir erst einmal ein Kamerastativ und ein Objektiv für die Kamera besorgen sollte. Da die Fotografie über das Teleskop als Start zu komplex seien könnte und man mit der Kamera schon sehr gute Aufnahmen machen kann und man auch "mal eben" etwas rumprobieren kann. Er hat mir auch gezeigt, wie gut Fotos mit nicht so viel Equipment aussehen können.
 

@@ -5,7 +5,8 @@
 
     <nav class="site-nav">
       <div class="trigger">
-        <a class="page-link" href="{{ site.baseurl }}/twitter-home">Twitter</a>
+        <a class="page-link" href="{{ site.baseurl }}/twitter">Twitter</a>
+        <a class="page-link" href="{{ site.baseurl }}/galerie">Galerie</a>
         {% assign static_pages = "Projects" | split: "," %}
         {% assign page_list = site.header-pages | concat: static_pages %}
         {% for page in page_list %}

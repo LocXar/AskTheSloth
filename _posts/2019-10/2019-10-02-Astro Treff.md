@@ -8,4 +8,4 @@ beginn: 20:00
 ende: 21:30
 ---
 
-# 02.10.2019 #misc
+# 02.10.2019 #Stammtisch

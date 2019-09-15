@@ -4,6 +4,7 @@ published: true
 event: "192.3E160H: Der Sternenhimmel über der Metropole Ruhr"
 eventdesc: "Astronomische Ereignisse von September 2019 bis März 2020"
 eventlink: "https://vhs-programm.essen.de/webbasys/index.php?kathaupt=11&knr=192.3E160H"
+eventstatus: "Angemeldet"
 ort: "Walter Hohmann Sternwarte"
 date: 06.09.2019
 beginn: 20:00
@@ -13,7 +14,7 @@ latitude: 51.5285582
 longitude: -0.2416807
 ---
 
-# 06.09.2019 #misc
+# 06.09.2019 #Einzelevents
 
 Ein sehr interessanter Vortrag über die kommenden Ereignisse, es wurde mit Stellarium durch die Zeit gereist.
 
