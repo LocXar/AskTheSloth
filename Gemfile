@@ -7,7 +7,7 @@ gem 'jekyll-paginate'
 gem 'kramdown'
 gem 'pygments.rb'
 gem 'jekyll-lab-notebook'
-gem 'jekyll-lab-notebook-plugins', git: "https://github.com/LocXar/jekyll-lab-notebook-plugins.git"
+gem 'jekyll-lab-notebook-plugins', git: "https://github.com/LocXar/jekyll-lab-notebook-plugins"
 gem 'jekyll-twitter-plugin'
 gem 'jekyll-jupyter-notebook'
 gem 'jekyll-exiftag'
