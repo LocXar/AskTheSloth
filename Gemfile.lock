@@ -4,6 +4,14 @@ GIT
   specs:
     jekyll-leaflet (0.1.0)
 
+GIT
+  remote: https://github.com/LocXar/jekyll-lab-notebook-plugins
+  revision: 2a082a6d7e97dd5f86decd7c79c5cea36ef77222
+  specs:
+    jekyll-lab-notebook-plugins (0.1.5.pre.Custom)
+      jekyll (~> 3.5)
+      nokogiri (~> 1.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -50,9 +58,6 @@ GEM
       jekyll
     jekyll-lab-notebook (0.1.7)
       jekyll (~> 3.5)
-    jekyll-lab-notebook-plugins (0.1.5.pre.Custom)
-      jekyll (~> 3.5)
-      nokogiri (~> 1.8)
     jekyll-livereload (0.2.2)
       em-websocket (~> 0.5)
       jekyll (~> 3.0)
@@ -106,7 +111,7 @@ DEPENDENCIES
   jekyll-exiftag
   jekyll-jupyter-notebook
   jekyll-lab-notebook
-  jekyll-lab-notebook-plugins (= 0.1.5.pre.Custom)
+  jekyll-lab-notebook-plugins!
   jekyll-leaflet!
   jekyll-livereload
   jekyll-paginate
