@@ -12,6 +12,8 @@ gem 'jekyll-twitter-plugin'
 gem 'jekyll-jupyter-notebook'
 gem 'jekyll-exiftag'
 gem "jekyll-leaflet", git: "https://github.com/DavidJVitale/jekyll-leaflet"
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'sass-rails', '>= 3.2'
 
 # support for auto reloading page in browser when changed
 group :jekyll_plugins do

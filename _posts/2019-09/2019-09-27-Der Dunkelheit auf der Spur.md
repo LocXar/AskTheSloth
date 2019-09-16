@@ -6,8 +6,8 @@ eventsubtitle: ""
 eventlink: ""
 eventstatus: "Nicht Angemeldet"
 ort: "Walter Hohmann Sternwarte"
-beginn: 20:00
-ende: 21:30
+beginn: 2019-09-27T20:00:00+02:00
+ende: 2019-09-27T21:30:00+02:00
 ---
 
 # 27.09.2019 #Einzelevents

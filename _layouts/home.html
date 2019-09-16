@@ -36,6 +36,98 @@ layout: default
           {% endif %}
         }
     </script>
+    <style media="screen">
+      #entry {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 0px;
+        padding: 5px;
+        background-color: #D9D9D9;
+        -moz-box-shadow:    3px 3px 5px 6px #D9D9D9;
+        -webkit-box-shadow: 3px 3px 5px 6px #D9D9D9;
+        box-shadow:         3px 3px 5px 6px #D9D9D9;
+      }
+      #entry:hover {
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 0px;
+        padding: 5px;
+        background-color: #ccc;
+        -moz-box-shadow:    3px 3px 6px 7px #ccc;
+        -webkit-box-shadow: 3px 3px 6px 7px #ccc;
+        box-shadow:         3px 3px 6px 7px #ccc;
+      }
+      #entry p {
+        margin-bottom: 0px;
+        padding-top: 5px;
+        font-size: 12px;
+      }
+      #beobachtung {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 0px;
+        padding: 5px;
+        background-color: #C5D9D8;
+        -moz-box-shadow:    3px 3px 5px 6px #C5D9D8;
+        -webkit-box-shadow: 3px 3px 5px 6px #C5D9D8;
+        box-shadow:         3px 3px 5px 6px #C5D9D8;
+      }
+      #beobachtung:hover {
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 0px;
+        padding: 5px;
+        background-color: #BACDCC;
+        -moz-box-shadow:    3px 3px 6px 7px #BACDCC;
+        -webkit-box-shadow: 3px 3px 6px 7px #BACDCC;
+        box-shadow:         3px 3px 6px 7px #BACDCC;
+      }
+      #beobachtung p {
+        margin-bottom: 0px;
+        padding-top: 5px;
+        font-size: 12px;
+      }
+      #stammtisch {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 0px;
+        padding: 5px;
+        background-color: #FCD7D7;
+        -moz-box-shadow:    3px 3px 5px 6px #FCD7D7;
+        -webkit-box-shadow: 3px 3px 5px 6px #FCD7D7;
+        box-shadow:         3px 3px 5px 6px #FCD7D7;
+      }
+      #stammtisch:hover {
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 0px;
+        padding: 5px;
+        background-color: #F0CCCC;
+        -moz-box-shadow:    3px 3px 6px 7px #F0CCCC;
+        -webkit-box-shadow: 3px 3px 6px 7px #F0CCCC;
+        box-shadow:         3px 3px 6px 7px #F0CCCC;
+      }
+      #stammtisch p {
+        margin-bottom: 0px;
+        padding-top: 5px;
+        font-size: 12px;
+      }
+    </style>
 </head>
 <p>{{ site.description | escape }}</p>
 <div id="calendar" style="margin:0 auto;">
@@ -57,13 +149,22 @@ layout: default
           {% for post in site.posts %}
             {% capture date %}{{post.date | date: '%s' | plus: 0 }}{% endcapture %}
             {% if date < now %}
-              <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: "%d. %B %Y" }} - {{ post.title | upcase | replace: "ü", "Ü" | replace: "ä", "Ä" | replace: "ö", "Ö" }}</a></li>
+              {% if post.layout == "beobachtung" %}
+                <a id="beobachtung" href="{{ site.baseurl }}{{ post.url }}">Beobachtung: {{ post.title | upcase | replace: "ü", "Ü" | replace: "ä", "Ä" | replace: "ö", "Ö" }}</br>
+                <p>Am {{ post.date | localize: "%d. %B %Y" }} von {{ post.beginn | date: "%R" }} bis {{ post.ende | date: "%R" }}</p></a></br>
+                {% elsif post.event == "Astro Treff" %}
+                  <a id="stammtisch" href="{{ site.baseurl }}{{ post.url }}">Stammtisch: {{ post.title | upcase | replace: "ü", "Ü" | replace: "ä", "Ä" | replace: "ö", "Ö" }}</br>
+                  <p>Am {{ post.date | localize: "%d. %B %Y" }} von {{ post.beginn | date: "%R" }} bis {{ post.ende | date: "%R" }}</p></a></br>
+                {% elsif post.layout == "log" %}
+                  <a id="entry" href="{{ site.baseurl }}{{ post.url }}">Log: {{ post.title | upcase | replace: "ü", "Ü" | replace: "ä", "Ä" | replace: "ö", "Ö" }}</br>
+                  <p>Am {{ post.date | localize: "%d. %B %Y" }} von {{ post.beginn | date: "%R" }} bis {{ post.ende | date: "%R" }}</p></a></br>
+              {% endif %}
             {% endif %}
           {% endfor %}
         {% elsif item.dir %}
           {% for page in site.pages %}
             {% if page.url contains item.dir %}
-              <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title | escape }}</a></li>
+              <a id="entry" href="{{ site.baseurl }}{{ page.url }}">{{ page.title | escape }}</a></br>
             {% endif %}
           {% endfor %}
         {% endif %}

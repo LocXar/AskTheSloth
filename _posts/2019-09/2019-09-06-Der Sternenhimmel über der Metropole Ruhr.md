@@ -6,9 +6,8 @@ eventdesc: "Astronomische Ereignisse von September 2019 bis März 2020"
 eventlink: "https://vhs-programm.essen.de/webbasys/index.php?kathaupt=11&knr=192.3E160H"
 eventstatus: "Angemeldet"
 ort: "Walter Hohmann Sternwarte"
-date: 06.09.2019
-beginn: 20:00
-ende: 21:30
+beginn: 2019-09-06T20:00:00+02:00
+ende: 2019-09-06T21:30:00+02:00
 map: true
 latitude: 51.5285582
 longitude: -0.2416807

@@ -9,11 +9,11 @@ var responsiveCal = function( options ) {
         options.range = 1;
         options.cellSize = 20;
     } else if( $(window).width() < 1400 ) {
-        options.start = now.setMonth(now.getMonth() - 1);
+        options.start = now.setMonth(now.getMonth());
         options.range = 2;
         options.cellSize = 23;
     } else {
-        options.start = now.setMonth(now.getMonth() - 2);
+        options.start = now.setMonth(now.getMonth() - 1);
         options.range = 3;
         options.cellSize = 23;
     }
@@ -43,7 +43,7 @@ caloptions = {
 	nextSelector: "#cal-heatmap-NextDomain-selector",
   weekStartOnMonday:false,
 	domainLabelFormat: function(date) {
-		moment.locale("de");
+		moment.locale("de-DE");
 		return moment(date).format("MMMM").toUpperCase();
 	},
   onClick: function(date, nb) {

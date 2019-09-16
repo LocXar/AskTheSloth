@@ -1,0 +1,10 @@
+- title: Menü
+  url: /
+  sublinks:
+    - title: Twitter
+      url: /twitter
+    - title: Galerie
+      url: /galerie
+    - title: separator
+    - title: Events
+      url: /projects
