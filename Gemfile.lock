@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/DavidJVitale/jekyll-leaflet
-  revision: 94a93127386fa25efd6985a09976ea8038b84fcd
+  revision: 0bce66a04d5305fc21fcdaa5bc6aea5c3e2eeb16
   specs:
-    jekyll-leaflet (0.1.0)
+    jekyll-leaflet (0.2.1)
 
 GIT
   remote: https://github.com/LocXar/jekyll-lab-notebook-plugins
