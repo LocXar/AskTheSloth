@@ -52,12 +52,8 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
-    jekyll-exif-data (0.0.3)
-      exifr (~> 1.3)
     jekyll-exiftag (0.1.0)
       exifr
-    jekyll-feed (0.13.0)
-      jekyll (>= 3.7, < 5.0)
     jekyll-jupyter-notebook (0.0.4)
       jekyll
     jekyll-lab-notebook (0.1.8)
@@ -68,19 +64,11 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
-    jekyll-seo-tag (2.7.1)
-      jekyll (>= 3.8, < 5.0)
-    jekyll-sitemap (1.4.0)
-      jekyll (>= 3.7, < 5.0)
-    jekyll-toc (0.12.2)
-      nokogiri (~> 1.9)
     jekyll-twitter-plugin (2.1.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.3.1)
       rexml
-    kramdown-parser-gfm (1.1.0)
-      kramdown (~> 2.0)
     liquid (4.0.3)
     listen (3.5.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -99,7 +87,7 @@ GEM
     pygments.rb (2.0.0)
     racc (1.5.2)
     rainbow (3.0.0)
-    rake (13.0.3)
+    rake (13.0.6)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -122,22 +110,15 @@ DEPENDENCIES
   bundler
   html-proofer
   jekyll
-  jekyll-exif-data (~> 0.0)
   jekyll-exiftag
-  jekyll-feed
   jekyll-jupyter-notebook
   jekyll-lab-notebook
   jekyll-lab-notebook-plugins!
   jekyll-leaflet!
   jekyll-livereload
   jekyll-paginate
-  jekyll-seo-tag
-  jekyll-sitemap
-  jekyll-toc
   jekyll-twitter-plugin
-  kramdown (>= 2.3.1)
-  kramdown-parser-gfm
-  nokogiri (>= 1.11.0)
+  kramdown
   pygments.rb
   rake
 
