@@ -67,7 +67,7 @@ GEM
     jekyll-twitter-plugin (2.1.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    kramdown (2.3.1)
+    kramdown (2.4.0)
       rexml
     liquid (4.0.3)
     listen (3.5.1)
